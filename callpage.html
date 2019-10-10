@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position:relative;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  border-radius:80%;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+	<script> 
+		function showme(id) { 
+			var gfg = document.getElementById(id);
+			if (gfg.style.display == 'block') { 
+				gfg.style.display = 'none'; 
+				
+			} else { 
+				gfg.style.display = 'block'; 
+				
+			} 
+		} 
+               function goback()
+               {windows.history.back()
+                }
+	</script> 
+</head>
+<body>
+
+<audio autoplay loop id="myVideo" onclick="showme('conten')">
+  <source src="santaaudio.mp3" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+<center>
+
+<div class="content" id="conten">
+  <button id="myBtn" onclick="goback()">Pause</button>
+</div>
+</center>
+
+
+
+</body>
+</html>
+<script>
