@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script>
+            know = {
+                "hi" : "hello",
+                "hello" : "hi",
+                "how are you?" : "good",
+                "ok" : ":)"
+            };
+            function talk() {
+                var user = document.getElementById("userBox").value;
+                document.getElementById("userBox").value = "";
+                document.getElementById("chatLog").innerHTML += "<p align='right'>"+user+"</p>";
+                if (user in know) {
+                    document.getElementById("chatLog").innerHTML += know[user]+"<br>";
+                } else {
+                    document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
+                }
+            } 
+        </script>
+        <style>
+        #chatLog {
+            font-size: 300%;
+            font-family: cursive;
+            color: whitesmoke;
+        }
+        *{
+            background:red;
+        }
+        #userBox {
+    width: 100%;
+   
+    padding:15px 15px;
+    border-radius:76px;
+    box-shadow:5ps 10px;
+   
+}
+        </style>
+    </head>
+    <body>
+        <div><p id="chatLog">Santaclaus<br></p></div>
+        <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
+    </body>
+</html>
